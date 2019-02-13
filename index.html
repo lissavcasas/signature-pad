@@ -15,15 +15,16 @@
     <canvas id="signature-pad" class="signature-pad"></canvas>
   </div>
 
-  <button id="save-png">Save as PNG</button>
-  <button id="save-jpeg">Save as JPEG</button>
-  <button id="save-svg">Save as SVG</button>
-  <button id="draw">Draw</button>
-  <button id="erase">Erase</button>
-  <button id="clear">Clear</button>
-
-
+  <form method="POST" name="form" id="form" action="service/url/process.php">
+    <textarea name="base64" id="base64"></textarea>
+    <!--   <button id="save-jpeg">Save as JPEG</button> -->
+    <button id="draw">Firmar</button>
+    <button type="submit">Enviar imagen</button>
+    <button id="clear">Limpiar</button>
+  </form>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+   <script src="./signatures.php"></script>
   <script src="./main.js"></script>
 
 </body>
